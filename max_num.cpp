@@ -25,7 +25,7 @@ int traverse(int A[], int L, int R)
         return (A[L]);
     int M = (L + R) / 2;
     // recursive tail call
-    return max(fun1(A, L, M), fun1(A, M + 1, R));
+    return max(traverse(A, L, M), traverse(A, M + 1, R));
 }
 // populates array with N random numbers
 int populate(int A[], int N)
